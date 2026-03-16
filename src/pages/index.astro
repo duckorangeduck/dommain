@@ -9,9 +9,123 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="description" content="Dom Main — product builder who makes things for people." />
+		<title>Dom Main</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main>
+			<header>
+				<h1>Dom Main</h1>
+				<p class="tagline">I'm a product builder who makes things for people.</p>
+				<p class="bio">Currently building AI-powered tools for GP practices. I'm a self-taught engineer, (thankfully) properly taught doctor, and I care most about solving problems </p>
+			</header>
+
+			<section>
+				<h2>Let's be friends</h2>
+				<ul class="link-list">
+					<li><a href="mailto:hello@dommain.net">hello@dommain.net</a></li>
+					<li><a href="https://github.com/duckorangeduck">GitHub &rarr;</a></li>
+				</ul>
+			</section>
+		</main>
 	</body>
 </html>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+	:root {
+		--bg: #17191e;
+		--text: #c9cdd6;
+		--text-muted: #858b98;
+		--text-heading: #e4e7ed;
+		--accent: #4af2c8;
+		--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: var(--font-sans);
+		background-color: var(--bg);
+		color: var(--text);
+		line-height: 1.7;
+		font-size: 16px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	main {
+		max-width: 640px;
+		margin: 0 auto;
+		padding: 6rem 1.5rem 4rem;
+	}
+
+	header {
+		margin-bottom: 3rem;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+		font-weight: 600;
+		color: var(--text-heading);
+		letter-spacing: -0.03em;
+		line-height: 1.2;
+		margin-bottom: 0.75rem;
+	}
+
+	.tagline {
+		font-size: 1.125rem;
+		color: var(--text-muted);
+		line-height: 1.6;
+	}
+
+	.bio {
+		margin-top: 1rem;
+		font-size: 0.95rem;
+		color: var(--text-muted);
+		line-height: 1.7;
+	}
+
+	h2 {
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 1.25rem;
+	}
+
+	.link-list {
+		list-style: none;
+	}
+
+	.link-list li {
+		margin-bottom: 0.5rem;
+	}
+
+	.link-list a {
+		color: var(--text);
+		text-decoration: none;
+		font-size: 0.95rem;
+		transition: color 0.2s;
+	}
+
+	.link-list a:hover {
+		color: var(--accent);
+	}
+
+	@media (max-width: 480px) {
+		main {
+			padding-top: 3rem;
+		}
+
+		h1 {
+			font-size: 1.75rem;
+		}
+	}
+</style>
