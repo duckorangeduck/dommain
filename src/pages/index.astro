@@ -13,12 +13,7 @@
         <title>Dom Main</title>
         <script is:inline>
             const getTheme = () => {
-                const storedTheme = localStorage.getItem("theme");
-                if (storedTheme) return storedTheme;
-                return window.matchMedia("(prefers-color-scheme: light)")
-                    .matches
-                    ? "light"
-                    : "dark";
+                return localStorage.getItem("theme") || "dark";
             };
 
             const setTheme = (theme) => {
@@ -311,13 +306,12 @@
     }
 
     .center-circle {
-        transition: r 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform-origin: 12px 12px;
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     .moon-hole {
-        transition:
-            cx 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-            cy 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     .sun-rays {
@@ -330,12 +324,11 @@
     }
 
     :root[data-theme="light"] .center-circle {
-        r: 5;
+        transform: scale(0.556);
     }
 
     :root[data-theme="light"] .moon-hole {
-        cx: 26;
-        cy: -6;
+        transform: translate(10px, -14px);
     }
 
     :root[data-theme="light"] .sun-rays {
