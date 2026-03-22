@@ -180,7 +180,7 @@ import photo from "../assets/ohlookitsdom.jpg";
             <header>
                 <h1>Dom Main</h1>
                 <p class="tagline">
-                    Builds practical tools for real problems, for love or money.
+                    Builds practical tools to solve problems, for love or money.
                 </p>
                 <p class="bio">
                     Currently running a team who make AI tech for GP practices.
@@ -196,6 +196,54 @@ import photo from "../assets/ohlookitsdom.jpg";
                     loading="eager"
                 />
             </header>
+
+            <section>
+                <h2>Some hobby projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <a href="https://lierod.dommain.net">Lierod</a> — web clone
+                        of the classic DOS game (with netplay!)
+                        <p class="project-desc">
+                            I remember playing liero for hours on the Intel 486
+                            PC we had in my dad's study. I sucked. I still suck.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://music-memoriser.dommain.net"
+                            >Music memoriser</a
+                        > — musicXML playback and memorisation helper
+                        <p class="project-desc">
+                            I have to learn a bunch of music this year and this
+                            was quite helpful!
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Music</h2>
+                <p class="bio">
+                    I'm very lucky to sing with the excellent <a
+                        href="https://chantage.org">Chantage</a
+                    > choir in London, usually as a tenor although I'm trying my hand
+                    (face?) at bass this year.
+                </p>
+                <p class="bio">
+                    I also front the band <a
+                        href="https://open.spotify.com/artist/7xxO6YXlMRAIYzoAqxlWbN"
+                        >Earthsea</a
+                    > - we have an album on the way soon&trade;.
+                </p>
+                <p class="bio">
+                    And play Cello with <a
+                        href="https://winterfalle.bandcamp.com/album/out-of-the-sea-2"
+                        >Winterfalle</a
+                    > and <a
+                        href="https://sinceredeceivers.bandcamp.com/track/gladness"
+                        >Sincere Deceivers</a
+                    >.
+                </p>
+            </section>
 
             <section>
                 <h2>Let's be friends</h2>
@@ -293,13 +341,52 @@ import photo from "../assets/ohlookitsdom.jpg";
         line-height: 1.7;
     }
 
+    .bio a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .bio a:hover {
+        color: var(--accent);
+    }
+
+    section + section {
+        margin-top: 2.5rem;
+    }
+
     h2 {
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: 500;
         color: var(--text-muted);
         text-transform: uppercase;
         letter-spacing: 0.1em;
         margin-bottom: 1.25rem;
+    }
+
+    .project-list {
+        list-style: none;
+    }
+
+    .project-list li {
+        margin-bottom: 1.5rem;
+    }
+
+    .project-list a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .project-list a:hover {
+        color: var(--accent);
+    }
+
+    .project-desc {
+        margin-top: 0.25rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.6;
     }
 
     .link-list {
